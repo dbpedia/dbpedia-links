@@ -8,6 +8,12 @@ Usage
 Please improve the links and add new files and then do a pull request.  Data will be loaded into the DBpedia endpoint in the future. 
 We don't know at which point in the future this will happen. We also plan to update links in http://live.dbpedia.org on a weekly basis. 
 
+In case you are not a Git expert, GitHub allows you to upload links with their GUI:
+1. create an account
+2. fork this repo https://github.com/dbpedia/dbpedia-links
+3. click on the "create a file button" and upload your links
+4. send a "pull request"
+
 Conventions / Rules
 ===================
 1. All nt files are alphabetically sorted and there are not duplicate triples in accordance with the Unix command: sort -u . Please honor this convention for better diffs. 
