@@ -1,23 +1,42 @@
 dbpedia-links
 =============
+A repo that contains outgoing links in ntriples format for DBpedia
 
-A repo that contains outgoing links in ntriples format
-
-Usage
+About
 =====
+This readme defines the workflow to add your links to this repo. It is still being discussed at the DBpedia discussion mailing list and subject to change at any moment. Also the repo structure might still change a lot.
+Current version 0.2
+
+Usage and Workflow
+==================
 Please improve the links and add new files and then do a pull request.  Data will be loaded into the DBpedia endpoint in the future. 
 We don't know at which point in the future this will happen. We also plan to update links in http://live.dbpedia.org on a weekly basis. 
+*Please honor the conventions below*
 
 In case you are not a Git expert, GitHub allows you to upload links with their GUI:
-1. create an account
-2. fork this repo https://github.com/dbpedia/dbpedia-links
-3. click on the "create a file button" and upload your links
-4. send a "pull request"
+1. create your own GitHub account
+2. fork this repo https://github.com/dbpedia/dbpedia-links into yur github space
+
+Option a) add links to a previous unlinked data set
+1. create a folder with the dataset domain e.g. datasets/transparency.270a.info
+2. add your .nt file 
+3. create and adjust the metadata.ttl file
+
+Option b) modify an existing data set 
+1. modify an existing .nt file or create a separate .nt file
+2. modify metadata.ttl
+
+Finalize your edits by sending a "pull request" via GitHub
 
 Conventions / Rules
 ===================
-1. All nt files are alphabetically sorted and there are not duplicate triples in accordance with the Unix command: sort -u . Please honor this convention for better diffs. 
-2. There will be some quality control; not everybody will be able to include any links he wants to include. We are open to ideas how to manage this. Consider "pull requests" as "application for inclusion"
+Please honor these conventions strictly:
+
+1. All NTriples files must be alphabetically sorted without duplicate triples for better diffs. This is in accordance with the Unix command: sort -u .
+2. (future work) metadata.ttl must be provided completely
+3. (future work) There will be some quality control; not everybody will be able to include any links he wants to include. We are open to ideas how to manage this. Consider "pull requests" as "application for inclusion"
+4. (future work) Links will into a graph named specified in the metadata.ttl and made subgraph of http://dbpedia.org
+5. (future work) all metadata.ttl files will be loaded into the graph http://dbpedia-links.dbpedia.org/metadata
 
 Feedback
 ========
