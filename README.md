@@ -33,6 +33,7 @@ Conventions / Rules
 Please honor these conventions strictly:
 
 1. All NTriples files must be alphabetically sorted without duplicate triples for better diffs. This is in accordance with the Unix command: sort -u .
+2. Recommended predicates (might be extended easily, write to list): owl:sameAs, umbel:isLike, skos:{exact|close|...}Match
 2. (future work) metadata.ttl must be provided completely
 3. (future work) There will be some quality control; not everybody will be able to include any links he wants to include. We are open to ideas how to manage this. Consider "pull requests" as "application for inclusion"
 4. (future work) Links will into a graph named specified in the metadata.ttl and made subgraph of http://dbpedia.org
