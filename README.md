@@ -11,18 +11,22 @@ Usage and Workflow
 ==================
 Please improve the links and add new files and then do a pull request.  Data will be loaded into the DBpedia endpoint in the future. 
 We don't know at which point in the future this will happen. We also plan to update links in http://live.dbpedia.org on a weekly basis. 
-*Please honor the conventions below*
+
+**Please honor the conventions below**
 
 In case you are not a Git expert, GitHub allows you to upload links with their GUI:
+
 1. create your own GitHub account
 2. fork this repo https://github.com/dbpedia/dbpedia-links into yur github space
 
 Option a) add links to a previous unlinked data set
+
 1. create a folder with the dataset domain e.g. datasets/transparency.270a.info
 2. add your .nt file 
 3. create and adjust the metadata.ttl file
 
 Option b) modify an existing data set 
+
 1. modify an existing .nt file or create a separate .nt file
 2. modify metadata.ttl
 
