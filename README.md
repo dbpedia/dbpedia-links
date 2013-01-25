@@ -18,19 +18,15 @@ In case you are not a Git expert, GitHub allows you to upload links with their G
 
 1. create your own GitHub account
 2. fork this repo https://github.com/dbpedia/dbpedia-links into yur github space
-
-Option a) add links to a previous unlinked data set
-
-1. create a folder with the dataset domain e.g. datasets/transparency.270a.info
-2. add your .nt file 
-3. create and adjust the metadata.ttl file
-
-Option b) modify an existing data set 
-
-1. modify an existing .nt file or create a separate .nt file
-2. modify metadata.ttl
-
-Finalize your edits by sending a "pull request" via GitHub
+3. make you edits: 
+    - Option a) add links to a previous unlinked data set
+        1. create a folder with the dataset domain e.g. datasets/transparency.270a.info
+        2. add your .nt file 
+        3. create and adjust the metadata.ttl file
+    - Option b) modify an existing data set 
+        1. modify an existing .nt file or create a separate .nt file
+        2. modify metadata.ttl
+4. Finalize your edits by sending a "pull request" via GitHub
 
 Conventions / Rules
 ===================
