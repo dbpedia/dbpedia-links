@@ -63,7 +63,7 @@ Other conventions:
 4. (future work) Links will into a graph named specified in the metadata.ttl and made subgraph of http://dbpedia.org
 5. (future work) all metadata.ttl files will be loaded into the graph http://dbpedia-links.dbpedia.org/metadata
 
-## Prelimenary metadata.ttl
+## Preliminary metadata.ttl
 TODO add the names of the used nt files.
 
 
