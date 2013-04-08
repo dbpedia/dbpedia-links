@@ -7,7 +7,7 @@ A repo that contains outgoing links in ntriples format for DBpedia
 This readme defines the workflow to add your links to this repo. It is still being discussed at the DBpedia discussion mailing list and subject to change at any moment. Also the repo structure might still change a lot.
 Current version 0.3
 
-**Note: anything anybody uploads to the dbpedia-links repo will be considered as public domain and you will loose all rights on it. Then it will be relicenced under the same licence as DBpedia is under at the moment**
+**Note: anything anybody uploads to the dbpedia-links repo will be considered as public domain and you will lose all rights on it. Then it will be relicenced under the same licence as DBpedia is under at the moment**
 
 # Linking Committee
 ## Current members 
