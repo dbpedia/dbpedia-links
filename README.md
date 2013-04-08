@@ -16,11 +16,9 @@ Current version 0.3
 
  
 ## How to join & responsibilities
-Sign up and send an email to DBpedia developers list. If you are accepted, you will get write access to the repository.
+Sign up and send an email to DBpedia developers list or to hellmann _ at _ informatik.uni-leipzig.de . If you are accepted, you will get write access to the repository.
 
-Please help to:
-- merge pull request
-- keep the repository clean
+Please also help to (1) merge pull request (2) keep the repository clean 
 
 
 # Usage and Workflow
