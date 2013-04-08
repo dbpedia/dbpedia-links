@@ -12,7 +12,8 @@ Current version 0.3
 # Linking Committee
 ## Current members 
 - Sebastian Hellmann
-- Csarven
+- Sarven Capadisli (Csarven)
+
  
 ## How to join & responsibilities
 Sign up and send an email to DBpedia developers list. If you are accepted, you will get write access to the repository.
