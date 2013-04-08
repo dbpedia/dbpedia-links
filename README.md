@@ -2,8 +2,8 @@ dbpedia-links
 =============
 A repo that contains outgoing links in ntriples format for DBpedia
 
-About
-=====
+#About
+
 This readme defines the workflow to add your links to this repo. It is still being discussed at the DBpedia discussion mailing list and subject to change at any moment. Also the repo structure might still change a lot.
 Current version 0.3
 
@@ -12,7 +12,8 @@ Current version 0.3
 # Linking Committee
 ## Current members 
 - Sebastian Hellmann
-- Csarven 
+- Csarven
+ 
 ## How to join & responsibilities
 Sign up and send an email to DBpedia developers list. If you are accepted, you will get write access to the repository.
 
@@ -21,8 +22,8 @@ Please help to:
 - keep the repository clean
 
 
-Usage and Workflow
-==================
+# Usage and Workflow
+
 Please improve the links and add new files and then do a pull request.  Data will be loaded into the DBpedia endpoint in the future. 
 We don't know at which point in the future this will happen. We also plan to update links in http://live.dbpedia.org on a weekly basis. 
 
@@ -39,8 +40,8 @@ In case you are not a Git expert, GitHub allows you to upload links with their G
     - Please see below on how the data in the folder should be structured
 4. Finalize your edits by sending a "pull request" via GitHub
 
-Conventions / Rules
-===================
+# Conventions / Rules
+
 Please honor these conventions strictly:
 
 ## Files & Folders
@@ -66,20 +67,20 @@ Other conventions:
 TODO
 1. add the names of the used nt files.
 
-<code>
-@prefix dcterms: <http://purl.org/dc/terms/> .
-@prefix dc: <http://purl.org/dc/elements/1.1/> .
-@prefix void: <http://rdfs.org/ns/void#> .
 
-<http://dbpedia.org/links/transparency.270a.info> a void:Linkset ;
-	void:objectsTarget <http://example.org/target/dataset> ;
-	dc:author "Sarven Capadisli" ;
-	dc:description "Please write a lot here!" .
-</code>
+	@prefix dcterms: <http://purl.org/dc/terms/> .
+	@prefix dc: <http://purl.org/dc/elements/1.1/> .
+	@prefix void: <http://rdfs.org/ns/void#> .
+
+	<http://dbpedia.org/links/transparency.270a.info> a void:Linkset ;
+		void:objectsTarget <http://example.org/target/dataset> ;
+		dc:author "Sarven Capadisli" ;
+		dc:description "Please write a lot here!" .
 
 
-Feedback
-========
+# Feedback
+
+
 goes (as always) to the DBpedia Discussion mailinglist: https://lists.sourceforge.net/lists/listinfo/dbpedia-discussion
 
 
