@@ -56,6 +56,7 @@ The following optional files **should** be in these folders (if applicable):
 * /datasets/$foldername/scripts -> put any scripts you used for linking into this folder, please do not forget a readme.
 
 Other conventions:
+
 1. All NTriples files must be alphabetically sorted without duplicate triples for better diffs. This is in accordance with the Unix command: sort -u .
 2. Recommended predicates (might be extended easily, write to list): owl:sameAs, umbel:isLike, skos:{exact|close|...}Match
 2. (future work) metadata.ttl must be provided completely
@@ -65,6 +66,7 @@ Other conventions:
 
 ## Prelimenary metadata.ttl
 TODO
+
 1. add the names of the used nt files.
 
 
