@@ -64,9 +64,7 @@ Other conventions:
 5. (future work) all metadata.ttl files will be loaded into the graph http://dbpedia-links.dbpedia.org/metadata
 
 ## Prelimenary metadata.ttl
-TODO
-
-1. add the names of the used nt files.
+TODO add the names of the used nt files.
 
 
 	@prefix dcterms: <http://purl.org/dc/terms/> .
