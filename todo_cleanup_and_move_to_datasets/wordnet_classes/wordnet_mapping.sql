@@ -31,7 +31,7 @@ CREATE TABLE `wordnet_mapping` (
 -- 
 
 INSERT INTO `wordnet_mapping` VALUES ('Infobox_hrhstyles', 301592509, 0, 'royal', '', NULL);
-INSERT INTO `wordnet_mapping` VALUES ('Infobox_mineral', 114662574, 0, 'mineral\n', '', NULL);
+INSERT INTO `wordnet_mapping` VALUES ('Infobox_mineral', 114662574, 0, 'mineral', '', NULL);
 INSERT INTO `wordnet_mapping` VALUES ('Infobox_Disease', 114070360, 0, 'disease', '', NULL);
 INSERT INTO `wordnet_mapping` VALUES ('infobox_hurricane_small', 111467018, 0, 'hurricane', '', NULL);
 INSERT INTO `wordnet_mapping` VALUES ('Infobox_Dogbreed', 111467018, 0, 'hurricane', '', NULL);
@@ -93,7 +93,7 @@ INSERT INTO `wordnet_mapping` VALUES ('Infobox_Planet', 109394646, 0, 'planet', 
 INSERT INTO `wordnet_mapping` VALUES ('Infobox_Mountain_Pass', 109386842, 0, 'pass, mountain pass, notch', '', NULL);
 INSERT INTO `wordnet_mapping` VALUES ('Infobox_Mountain', 109359803, 0, 'mountain,mount', '', NULL);
 INSERT INTO `wordnet_mapping` VALUES ('Infobox_lake', 109328904, 0, 'lake', '', NULL);
-INSERT INTO `wordnet_mapping` VALUES ('Infobox_Glacier', 109289331, 0, 'glacier\n', '', NULL);
+INSERT INTO `wordnet_mapping` VALUES ('Infobox_Glacier', 109289331, 0, 'glacier', '', NULL);
 INSERT INTO `wordnet_mapping` VALUES ('Infobox_Comet', 109251407, 0, 'comet', '', NULL);
 INSERT INTO `wordnet_mapping` VALUES ('Infobox_Township', 108672199, 0, 'township, town', '', NULL);
 INSERT INTO `wordnet_mapping` VALUES ('Infobox_Kommune', 108672199, 0, 'township, town', '', NULL);
@@ -110,7 +110,7 @@ INSERT INTO `wordnet_mapping` VALUES ('Infobox_Kommun', 108552138, 0, 'district,
 INSERT INTO `wordnet_mapping` VALUES ('Infobox_German_district_noregbez', 108552138, 0, 'district, territory, territorial dominion, dominion', '', NULL);
 INSERT INTO `wordnet_mapping` VALUES ('Infobox_Austrian_district', 108552138, 0, 'district, territory, territorial dominion, dominion', '', NULL);
 INSERT INTO `wordnet_mapping` VALUES ('Infobox_U.S._County', 108546870, 0, 'county', '', NULL);
-INSERT INTO `wordnet_mapping` VALUES ('US_County_infobox', 108546870, 0, 'county\n', '', NULL);
+INSERT INTO `wordnet_mapping` VALUES ('US_County_infobox', 108546870, 0, 'county', '', NULL);
 INSERT INTO `wordnet_mapping` VALUES ('infoboxneeded', 108546870, 0, 'county', '', NULL);
 INSERT INTO `wordnet_mapping` VALUES ('Infobox_Luxembourg_commune', 108541609, 0, 'commune', '', 'http://www.w3.org/2006/03/wn/wn20/instances/synset-Kansas_City-noun-1');
 INSERT INTO `wordnet_mapping` VALUES ('Infobox_Amusement_park', 108494231, 0, 'amusement park, funfair, pleasure ground', '', NULL);
@@ -184,7 +184,7 @@ INSERT INTO `wordnet_mapping` VALUES ('Infobox_OS', 106568134, 0, 'operatingsyst
 INSERT INTO `wordnet_mapping` VALUES ('Infobox_Software', 106566077, 0, 'software,softwaresystem,softwarepackage,package', '', NULL);
 INSERT INTO `wordnet_mapping` VALUES ('Infobox_Software2', 106566077, 0, 'software,softwaresystem,softwarepackage,package', '', NULL);
 INSERT INTO `wordnet_mapping` VALUES ('Infobox_Biography', 106515827, 0, 'biography,life,lifestory,lifehistory', '', NULL);
-INSERT INTO `wordnet_mapping` VALUES ('Infobox_short_story', 106371999, 0, 'shortstory\n', '', NULL);
+INSERT INTO `wordnet_mapping` VALUES ('Infobox_short_story', 106371999, 0, 'shortstory', '', NULL);
 INSERT INTO `wordnet_mapping` VALUES ('Infobox_Website', 106359193, 0, 'web site, internet site, site', '', NULL);
 INSERT INTO `wordnet_mapping` VALUES ('Infobox_Language', 106282651, 0, 'language,linguisticcommunication', '', NULL);
 INSERT INTO `wordnet_mapping` VALUES ('Infobox_character', 105929008, 0, 'character, role, theatrical role, part, persona', '', NULL);
@@ -229,9 +229,9 @@ INSERT INTO `wordnet_mapping` VALUES ('Infobox_Single', 103924069, 107048000, 'p
 INSERT INTO `wordnet_mapping` VALUES ('Single_infobox', 103924069, 107048000, 'phonograph record, phonograph recording, record, disk, disc, platter', 'song', NULL);
 INSERT INTO `wordnet_mapping` VALUES ('Infobox_music_DVD', 103924069, 0, 'phonograph record, phonograph recording, record, disk, disc, platter', '', NULL);
 INSERT INTO `wordnet_mapping` VALUES ('Single_infobox2', 103924069, 107048000, 'phonograph record, phonograph recording, record, disk, disc, platter', 'song', NULL);
-INSERT INTO `wordnet_mapping` VALUES ('Infobox_Network', 103820474, 0, 'network\n', '', NULL);
-INSERT INTO `wordnet_mapping` VALUES ('infobox_Museum', 103800563, 0, 'museum\n', '', NULL);
-INSERT INTO `wordnet_mapping` VALUES ('Infobox_Missile', 103773504, 0, 'missile\n', '', NULL);
+INSERT INTO `wordnet_mapping` VALUES ('Infobox_Network', 103820474, 0, 'network', '', NULL);
+INSERT INTO `wordnet_mapping` VALUES ('infobox_Museum', 103800563, 0, 'museum', '', NULL);
+INSERT INTO `wordnet_mapping` VALUES ('Infobox_Missile', 103773504, 0, 'missile', '', NULL);
 INSERT INTO `wordnet_mapping` VALUES ('Infobox_zoo', 103745146, 0, 'menagerie, zoo, zoological garden', '', NULL);
 INSERT INTO `wordnet_mapping` VALUES ('Infobox_Locomotive', 103684823, 0, 'locomotive, engine, locomotive engine, railway locomotive', '', NULL);
 INSERT INTO `wordnet_mapping` VALUES ('Infobox_TX_State_Highway', 103519981, 0, 'highway, main road', '', NULL);
