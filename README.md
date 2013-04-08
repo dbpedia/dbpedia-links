@@ -33,8 +33,8 @@ We are currently looking for volunteers who wish to join the DBpedia Linking Com
 In case you are not a Git expert, GitHub allows you to upload links with their GUI:
 
 1. create your own GitHub account
-2. fork this repo https://github.com/dbpedia/dbpedia-links into your github space
-3. make you edits: 
+2. fork this repo https://github.com/dbpedia/dbpedia-links into your GitHub space
+3. make your edits: 
     - Note: to add links to a previous unlinked data set create a folder with the dataset domain e.g. datasets/transparency.270a.info (if necessary create subfolders, e.g. www4.wiwiss.fu-berlin.de/bookmashup/books)
     - Please see below on how the data in the folder should be structured
 4. Finalize your edits by sending a "pull request" via GitHub
