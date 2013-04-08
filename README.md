@@ -1,6 +1,6 @@
 dbpedia-links
 =============
-A repo that contains outgoing links in ntriples format for DBpedia
+A repo that contains outgoing links in N-Triples format for DBpedia
 
 #About
 
@@ -47,16 +47,16 @@ Please honor these conventions strictly:
 /datasets/$foldername where $foldername should be the dataset domain (e.g. transparency.270a.info )
 
 The following files **must** be in this folder:
-* one or more files in NTriples format with the links
+* one or more files in N-Triples format with the links
 * a metadata.ttl file with infos (see below)
 
 The following optional files **should** be in these folders (if applicable):
-* /datasets/$foldername/link-specs -> put all SILK link spec xml files in this folder
+* /datasets/$foldername/link-specs -> put all Silk link spec xml files in this folder
 * /datasets/$foldername/scripts -> put any scripts you used for linking into this folder, please do not forget a readme.
 
 Other conventions:
 
-1. All NTriples files must be alphabetically sorted without duplicate triples for better diffs. This is in accordance with the Unix command: sort -u .
+1. All N-Triples files must be alphabetically sorted without duplicate triples for better diffs. This is in accordance with the Unix command: sort -u .
 2. Recommended predicates (might be extended easily, write to list): owl:sameAs, umbel:isLike, skos:{exact|close|...}Match
 2. (future work) metadata.ttl must be provided completely
 3. (future work) There will be some quality control; not everybody will be able to include any links he wants to include. We are open to ideas how to manage this. Consider "pull requests" as "application for inclusion"
