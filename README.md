@@ -9,6 +9,18 @@ Current version 0.3
 
 **Note: anything anybody uploads to the dbpedia-links repo will be considered as public domain and you will loose all rights on it. Then it will be relicenced under the same licence as DBpedia is under at the moment**
 
+# Linking Committee
+## Current members 
+- Sebastian Hellmann
+- Csarven 
+## How to join & responsibilities
+Sign up and send an email to DBpedia developers list. If you are accepted, you will get write access to the repository.
+
+Please help to:
+- merge pull request
+- keep the repository clean
+
+
 Usage and Workflow
 ==================
 Please improve the links and add new files and then do a pull request.  Data will be loaded into the DBpedia endpoint in the future. 
