@@ -57,9 +57,17 @@ So for each from to pair, you can have linksets from different contributors, abo
 Distinction criteria is therefore not fixed, but can be chosen according to what is practical. 
 
 Example:  
+
+https://github.com/dbpedia/dbpedia-links/tree/master/datasets/dbpedia.org/www4.wiwiss.fu-berlin.de/bookmashup
+
 	datasets/dbpedia.org/www4.wiwiss.fu-berlin.de/bookmashup
-	https://github.com/dbpedia/dbpedia-links/tree/master/datasets/dbpedia.org/www4.wiwiss.fu-berlin.de/bookmashup/books	
 	<http://dbpedia.org/resource/Neuromancer> <http://www.w3.org/2002/07/owl#sameAs> <http://www4.wiwiss.fu-berlin.de/bookmashup/books/0441569560> .
+
+https://github.com/dbpedia/dbpedia-links/tree/master/datasets/dbpedia.org/www4.wiwiss.fu-berlin.de/diseasome
+    
+    datasets/dbpedia.org/www4.wiwiss.fu-berlin.de/diseasome
+    <http://dbpedia.org/resource/Exostosis> <http://www.w3.org/2002/07/owl#sameAs> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/386> 
+
 
 ## Structure within one folder of type /datasets/$fromDomain/$toDomain/$randomName
 
