@@ -5,7 +5,7 @@ A repo that contains outgoing links in N-Triples format for DBpedia
 #About
 
 This readme defines the workflow to add your links to this repo. It is still being discussed at the DBpedia discussion mailing list and subject to change at any moment. Also the repo structure might still change a lot.
-Current version 0.3
+Current version 0.4
 
 **Note: anything anybody uploads to the dbpedia-links repo will be considered as public domain and you will lose all rights on it. Then it will be relicensed under the same licence as DBpedia is under at the moment**
 
@@ -43,16 +43,33 @@ In case you are not a Git expert, GitHub allows you to upload links with their G
 
 Please honor these conventions strictly:
 
-## Files & Folders
-/datasets/$foldername where $foldername should be the dataset domain (e.g. transparency.270a.info )
+## Basic Folder Structure
+/datasets/$fromDomain/$toDomain/$randomName where:
+
+- $fromDomain should be the domain of the subject of the outgoing triples (e.g. dbpedia.org or de.dbpedia.org )
+- $toDomain should be the domain of the object (e.g. transparency.270a.info )
+- $randomName should be a name for the linkset.
+
+### Rationale
+We believe these three parts are really necessary for linksets:
+The from and to is obvious. The name given to the linkset is an arbitrary distinction. Contributors can choose their own separation criteria:
+So for each from to pair, you can have linksets from different contributors, about different domains , or created by different scripts.
+Distinction criteria is therefore not fixed, but can be chosen according to what is practical. 
+
+Example:  
+	datasets/dbpedia.org/www4.wiwiss.fu-berlin.de/bookmashup
+	https://github.com/dbpedia/dbpedia-links/tree/master/datasets/dbpedia.org/www4.wiwiss.fu-berlin.de/bookmashup/books	
+	<http://dbpedia.org/resource/Neuromancer> <http://www.w3.org/2002/07/owl#sameAs> <http://www4.wiwiss.fu-berlin.de/bookmashup/books/0441569560> .
+
+## Structure within one folder of type /datasets/$fromDomain/$toDomain/$randomName
 
 The following files **must** be in this folder:
 * one or more files in N-Triples format with the links
 * a metadata.ttl file with infos (see below)
 
 The following optional files **should** be in these folders (if applicable):
-* /datasets/$foldername/link-specs -> put all Silk link spec xml files in this folder
-* /datasets/$foldername/scripts -> put any scripts you used for linking into this folder, please do not forget a readme.
+* link-specs -> put all SILK link spec xml files in this folder
+* scripts -> put any scripts you used for linking into this folder, please do not forget a readme.
 
 Other conventions:
 
