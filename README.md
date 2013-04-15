@@ -5,17 +5,22 @@ A repo that contains outgoing links in N-Triples format for DBpedia
 #About
 
 This readme defines the workflow to add your links to this repo. It is still being discussed at the DBpedia discussion mailing list and subject to change at any moment. Also the repo structure might still change a lot.
-Current version 0.4
+Current version 0.5
 
-**Note: anything anybody uploads to the dbpedia-links repo will be considered as public domain and you will lose all rights on it. Then it will be relicensed under the same licence as DBpedia is under at the moment**
+**Note: We require that any uploaded links are at most CC-BY-SA (or less restrictive e.g. CC-BY) like the rest of DBpedia. That is the requirement to be hostedwith DBpedia. We assume that you know this and that you acknowledge this by pushing your links. We also need to think about the future maintainence of the project, so in fact we are unable to accept anything that is not under an open licence. Please consider anything you upload as donated to the project.** 
 
-# Linking Committee
-## Current members 
-- Sebastian Hellmann
-- Sarven Capadisli (Csarven)
 
+# Link Contributors
+
+Please take care and try to maintain the links that you submitted. Please fix errors in other parts of the repo as well, if you happen to find any. 
+
+- Sarven Capadisli, AKSW, Uni Leipzig (Csarven)
+- Sebastian Hellmann, AKSW, Uni Leipzig (kurzum)
+- Anja Jentzsch, HPI Potsdam (ajeve)
+- Søren Roug, (sorenroug)
  
-## How to join & responsibilities
+## Get Access
+
 Sign up and send an email to DBpedia developers list or to hellmann _ at _ informatik.uni-leipzig.de . If you are accepted, you will get write access to the repository.
 
 Please also help to (1) merge pull request (2) keep the repository clean 
@@ -99,7 +104,7 @@ TODO add the names of the used nt files.
 	<http://dbpedia.org/links/transparency.270a.info> a void:Linkset ;
 		void:objectsTarget <http://example.org/target/dataset> ;
 		dc:author "Sarven Capadisli" ;
-		dc:description "Please write a lot here!" .
+		dc:description "Please write your comment here!" .
 
 
 # Feedback
