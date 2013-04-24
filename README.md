@@ -55,7 +55,7 @@ In case you are not a Git expert, GitHub allows you to upload links with their G
     - Please see below on how the data in the folder should be structured
 4. Finalize your edits by sending a "pull request" via GitHub
 
-# Conventions / Rules
+# Conventions
 
 **Please honor these conventions**
 
