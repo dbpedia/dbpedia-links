@@ -58,6 +58,7 @@ In case you are not a Git expert, GitHub allows you to upload links with their G
 # Conventions / Rules
 
 Please honor these conventions strictly:
+
 1. All N-Triples files must be alphabetically sorted without duplicate triples for better diffs. This is in accordance with the Unix command: sort -u .
 2. Recommended predicates (might be extended easily, write to list): owl:sameAs, umbel:isLike, skos:{exact|close|...}Match
 
