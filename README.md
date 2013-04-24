@@ -36,7 +36,9 @@ Please take care and try to maintain the links that you submitted. Please fix er
 - Sarven Capadisli, AKSW, Uni Leipzig (Csarven)
 - Sebastian Hellmann, AKSW, Uni Leipzig (kurzum)
 - Anja Jentzsch, HPI Potsdam (ajeve)
+- Barry Norton (BarryNorton)
 - Søren Roug, (sorenroug)
+- Christopher Gutteridge (cgutteridge)
  
 ## Get Access
 
