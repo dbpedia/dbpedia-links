@@ -10,10 +10,12 @@ Current version 0.6
 # Open Issues 
 Actually, it seems that more things are yet unclear than fixed. Please don't be slowed by formalities, just submit your links please, we will clean it up, after a while, if necessary.
 
+
 - contributions can be done either via pull request or we will add you to the repo
 - folder structure seems quite sensible already 
 - metadata and licence is still a very open issue, please just provide a readme.
-- Internationalisation: Please create folders for de.dbpedia.org and other
+- internationalisation: Please create folders for de.dbpedia.org and other
+- lots of links are still under datasets/todo and need to be moved
 
 # Feedback
 
