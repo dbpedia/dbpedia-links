@@ -34,6 +34,7 @@ Note that your links will be hosted in a separate RDF graph then and not be acce
 Please take care and try to maintain the links that you submitted. Please fix errors in other parts of the repo as well, if you happen to find any. 
 
 - Sarven Capadisli, AKSW, Uni Leipzig (Csarven)
+- Pascal Christoph, (dr0i)
 - Sebastian Hellmann, AKSW, Uni Leipzig (kurzum)
 - Anja Jentzsch, HPI Potsdam (ajeve)
 - Barry Norton (BarryNorton)
@@ -61,10 +62,14 @@ In case you are not a Git expert, GitHub allows you to upload links with their G
 
 # Conventions
 
-**Please honor these conventions**
+**Please try honor these conventions**
 
-1. All N-Triples files must be alphabetically sorted without duplicate triples for better diffs. This is in accordance with the Unix command: sort -u .
-2. Recommended predicates (might be extended easily, write to list): owl:sameAs, umbel:isLike, skos:{exact|close|...}Match
+1. (strict) All N-Triples files must be alphabetically sorted without duplicate triples for better diffs. This is in accordance with the Unix command: sort -u .
+2. For a list of currently used predicates (**might be extended easily, write to list**), see the file predicate-count.csv
+    - For 1:1 mappings we recommend to use these: owl:sameAs, umbel:isLike, skos:{exact|close|...}Match
+    - For 1:m, n:1 or n:m mappings it seems to make sense to use domain-specific properties such as http://rdvocab.info/RDARelationshipsWEMI/workManifested 
+
+Additionally, you can include types, which result from inference of the domain of the domain-specific property. E.g. rdrel:workManifested is rdfs:domain rdafrbr:Manifestation, which entails that DBpedia entries should be of rdf:type rdafrbr:Manifestation.
 
 
 ## Basic Folder Structure
@@ -72,7 +77,12 @@ In case you are not a Git expert, GitHub allows you to upload links with their G
 
 - $fromDomain should be the domain of the subject of the outgoing triples (e.g. dbpedia.org or de.dbpedia.org )
 - $toDomain should be the domain of the object (e.g. transparency.270a.info )
-- $givenName should be a name for the linkset, either what it is about (person-links) or who created the linkset (submitted-by-peter)
+- $givenName should be an arbitrary name for the linkset, either what it is about (person-links) or who created the linkset (submitted-by-peter) or both. Some examples follow:
+    - lobid.org: manifestation (because it links DBpedia to manifestations)
+    - www4.wiwiss.fu-berlin.de: bookmashup  diseasome (links to two different datasets, but same domain)
+- add the nt files with the links. If there is only one link set file, we suggest you just name it $givenName_links.nt
+- if you are adding any types, please name them like the linkset files, but append "-types". E.g. if the linkset ist manifestation-links.nt the types should be manifestation_types.nt
+
 
 ### Subfolders in /datasets/$fromDomain/$toDomain/$givenName
 * link-specs -> put all SILK link spec xml files in this folder
