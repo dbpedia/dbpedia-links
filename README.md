@@ -69,7 +69,7 @@ In case you are not a Git expert, GitHub allows you to upload links with their G
     - For 1:1 mappings we recommend to use these: owl:sameAs, umbel:isLike, skos:{exact|close|...}Match
     - For 1:m, n:1 or n:m mappings it seems to make sense to use domain-specific properties such as http://rdvocab.info/RDARelationshipsWEMI/workManifested  
 	Additionally, you can include types, which result from inference of the usage of the domain-specific linking property, e.g. the rdfs:domain of the property. E.g. rdrel:workManifested is rdfs:domain rdafrbr:Manifestation, which entails that DBpedia entries should be of rdf:type rdafrbr:Manifestation.
-
+3. Note that we also count links to other classes as links, so if you want to add an external classification using rdf:type as linking property, that is fine as well. 
 
 ## Basic Folder Structure
 /datasets/$fromDomain/$toDomain/$givenName where:
@@ -106,6 +106,11 @@ https://github.com/dbpedia/dbpedia-links/tree/master/datasets/dbpedia.org/www4.w
     
     datasets/dbpedia.org/www4.wiwiss.fu-berlin.de/diseasome
     <http://dbpedia.org/resource/Exostosis> <http://www.w3.org/2002/07/owl#sameAs> <http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseases/386> 
+
+https://github.com/dbpedia/dbpedia-links/blob/master/datasets/dbpedia.org/umbel.org/umbel-classification
+	datasets/dbpedia.org/umbel.org/umbel-classification
+	<http://dbpedia.org/resource/Aglaodiaptomus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://umbel.org/umbel/rc/Crustacean> .
+	<http://dbpedia.org/resource/Aglaodorum> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://umbel.org/umbel/rc/Plant> .
 
 
 # Ideas:
