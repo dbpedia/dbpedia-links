@@ -67,8 +67,8 @@ In case you are not a Git expert, GitHub allows you to upload links with their G
 1. (strict) All N-Triples files must be alphabetically sorted without duplicate triples for better diffs. This is in accordance with the Unix command: sort -u .
 2. For a list of currently used predicates (**might be extended easily, write to list**), see the file predicate-count.csv
     - For 1:1 mappings we recommend to use these: owl:sameAs, umbel:isLike, skos:{exact|close|...}Match
-    - For 1:m, n:1 or n:m mappings it seems to make sense to use domain-specific properties such as http://rdvocab.info/RDARelationshipsWEMI/workManifested  
-	Additionally, you can include types, which result from inference of the usage of the domain-specific linking property, e.g. the rdfs:domain of the property. E.g. rdrel:workManifested is rdfs:domain rdafrbr:Manifestation, which entails that DBpedia entries should be of rdf:type rdafrbr:Manifestation.
+    - For 1:m, n:1 or n:m mappings it seems to make sense to use domain-specific properties such as http://rdvocab.info/RDARelationshipsWEMI/manifestationOfWork
+	Additionally, you can include types, which result from inference of the usage of the domain-specific linking property, e.g. the rdfs:domain of the property. E.g. rdrel:manifestationOfWork is rdfs:domain rdafrbr:Work, which entails that DBpedia entries should be of rdf:type rdafrbr:Work.
 3. Note that we also count links to other classes as links, so if you want to add an external classification using rdf:type as linking property, that is fine as well. 
 
 ## Basic Folder Structure
