@@ -40,6 +40,8 @@ Please take care and try to maintain the links that you submitted. Please fix er
 - Barry Norton (BarryNorton)
 - Søren Roug, (sorenroug)
 - Christopher Gutteridge (cgutteridge)
+- Heiko Paulheim, Uni Mannheim (HeikoPaulheim)
+- Petar Ristoski, Uni Mannheim (petarR)
  
 ## Get Access
 
