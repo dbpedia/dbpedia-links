@@ -18,6 +18,7 @@ import org.dbpedia.kasun.categoryprocessor.CategoryLinksDB;
 import org.dbpedia.kasun.categoryprocessor.NodeDB;
 import org.dbpedia.kasun.categoryprocessor.Page;
 import org.dbpedia.kasun.categoryprocessor.PageDB;
+import org.yago.javatools.parsers.PlingStemmer;
 
 /**
  * TODO- describe the purpose of the class
@@ -69,13 +70,17 @@ public class RdfGenarator
         }
     }
 
+    public static String singularize(String term) {
+        return PlingStemmer.stem(term);
+    }
+
     public static void getCategoriesForHead( String head ) throws IOException {
 
         ArrayList<String> categoriesForHead = NodeDB.getCategoriesByHead( head );
 
 for(int j=0; j<categoriesForHead.size();j++){
     promintNodeName=categoriesForHead.get( j );
-    getPagesForCategory( promintNodeName, head );
+    getPagesForCategory( promintNodeName, singularize(head));
 }
 categoriesForHead.clear();
 
