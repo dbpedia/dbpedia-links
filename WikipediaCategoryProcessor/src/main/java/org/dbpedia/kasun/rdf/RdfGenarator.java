@@ -63,7 +63,10 @@ public class RdfGenarator
         }
         for (String head: heads) {
             try {
-                RdfGenarator.getCategoriesForHead(head);
+                String normalizedHead = capitalize(singularize(head));
+                Writer w = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(normalizedHead + ".ttl"), "utf-8"));
+                RdfGenarator.getCategoriesForHead(normalizedHead, w);
+                w.close();
             } catch (IOException ioe) {
                 System.err.println(ioe.getMessage());
             }
@@ -78,20 +81,20 @@ public class RdfGenarator
         return Character.toUpperCase(word.charAt(0)) + word.substring(1);
     }
 
-    public static void getCategoriesForHead( String head ) throws IOException {
+    public static void getCategoriesForHead( String head, Writer w ) throws IOException {
 
         ArrayList<String> categoriesForHead = NodeDB.getCategoriesByHead( head );
 
 for(int j=0; j<categoriesForHead.size();j++){
     promintNodeName=categoriesForHead.get( j );
-    getPagesForCategory( promintNodeName, capitalize(singularize(head)));
+    getPagesForCategory( promintNodeName, head, w);
 }
 categoriesForHead.clear();
 
     }
 
-    public static void getPagesForCategory( String catName, String head ) throws IOException {
-        Writer w = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(head + ".ttl"), "utf-8"));
+    public static void getPagesForCategory( String catName, String head, Writer w ) throws IOException {
+
         ArrayList<Integer> clFromPageID = CategoryLinksDB.getPagesLinkedByCatName( catName );
 
         for ( int i = 0; i < clFromPageID.size(); i++ )
@@ -117,7 +120,6 @@ categoriesForHead.clear();
         }
         
         clFromPageID.clear();
-        w.close();
     }
     
     public static void getPagesForCategoryFirstChild( String catName, String head , Writer w) throws IOException {
