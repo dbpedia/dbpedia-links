@@ -69,7 +69,13 @@
 
     <build>
         <plugins>
-
+          <plugin>
+            <artifactId>maven-compiler-plugin</artifactId>
+            <configuration>
+              <source>1.7</source>
+              <target>1.7</target>
+            </configuration>
+          </plugin>
             <plugin>
                 <artifactId>maven-assembly-plugin</artifactId>
                 <executions>
@@ -95,15 +101,6 @@
                             <version>${project.version}</version>
                         </manifestEntries>
                     </archive>
-                </configuration>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-javadoc-plugin</artifactId>
-                <version>2.7</version>
-                <configuration>
-                    <doctitle>Ontofeeder 1.0 API</doctitle>
-                    <windowtitle>Ontofeeder 1.0 API</windowtitle>
                 </configuration>
             </plugin>
 

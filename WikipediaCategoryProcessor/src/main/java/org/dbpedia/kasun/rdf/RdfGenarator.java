@@ -29,7 +29,7 @@ public class RdfGenarator
     private static String promintNodeName;
 
     public static void main(String[] args) {
-        String headCandidates = args[1];
+        String headCandidates = args[0];
         BufferedReader br = null;
         try {
             br = new BufferedReader(new InputStreamReader(new FileInputStream(headCandidates), "utf-8"));
