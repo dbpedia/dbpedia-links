@@ -10,12 +10,10 @@
 package org.dbpedia.kasun.rdf;
 
 
-import java.io.FileWriter;
-import java.io.IOException;
+import java.io.*;
 import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+import java.util.List;
+
 import org.dbpedia.kasun.categoryprocessor.CategoryLinksDB;
 import org.dbpedia.kasun.categoryprocessor.NodeDB;
 import org.dbpedia.kasun.categoryprocessor.Page;
@@ -30,36 +28,71 @@ public class RdfGenarator
 
     private static String promintNodeName;
 
-    public static void getCategoriesForHead( String head )
-    {
+    public static void main(String[] args) {
+        String headCandidates = args[1];
+        BufferedReader br = null;
+        try {
+            br = new BufferedReader(new InputStreamReader(new FileInputStream(headCandidates), "utf-8"));
+        } catch (UnsupportedEncodingException uee) {
+            System.err.println(uee.getMessage());
+            System.exit(1);
+        } catch (FileNotFoundException fnfe) {
+            System.err.println(fnfe.getMessage());
+            System.exit(1);
+        }
+        String line;
+        List<String> heads = new ArrayList<String>();
+        try {
+            while ((line = br.readLine()) != null)
+            {
+                if (!line.startsWith("#") && !line.isEmpty())
+                {
+                    heads.add(line.trim());
+                }
+            }
+        } catch (IOException ioe) {
+            System.err.println(ioe.getMessage());
+            System.exit(1);
+        }
+        try {
+            br.close();
+        } catch (IOException ioe) {
+            System.err.println(ioe.getMessage());
+            System.exit(1);
+        }
+        for (String head: heads) {
+            try {
+                RdfGenarator.getCategoriesForHead(head);
+            } catch (IOException ioe) {
+                System.err.println(ioe.getMessage());
+            }
+        }
+    }
+
+    public static void getCategoriesForHead( String head ) throws IOException {
 
         ArrayList<String> categoriesForHead = NodeDB.getCategoriesByHead( head );
 
 for(int j=0; j<categoriesForHead.size();j++){
     promintNodeName=categoriesForHead.get( j );
-    getPagesForCategory( promintNodeName );
+    getPagesForCategory( promintNodeName, head );
 }
 categoriesForHead.clear();
 
     }
 
-    public static void getPagesForCategory( String catName )
-    {
+    public static void getPagesForCategory( String catName, String head ) throws IOException {
+        Writer w = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(head + ".ttl"), "utf-8"));
         ArrayList<Integer> clFromPageID = CategoryLinksDB.getPagesLinkedByCatName( catName );
-        FileWriter outfile;
 
         for ( int i = 0; i < clFromPageID.size(); i++ )
         {
 
-            try
-            {
                 Page page = PageDB.getPagebyID( clFromPageID.get( i ) );
+                //namespace == 0 means it's an article page
                 if ( page.getPageNamespace() == 0 )
                 {
-                    //namespace==0 means it's a article page
-                    outfile = new FileWriter( "/home/kasun/rdfresult/rdfoutput.txt", true );
-                    outfile.append( "<" + page.getPageName() + "> rdf:type <" + promintNodeName + "> \n" );
-                    outfile.close();
+                    w.write("<http://dbpedia.org/resource/" + page.getPageName() + "> a <http://dbpedia.org/ontology/" + head + "> .\n");
                 } else
                 {
                     if ( page.getPageNamespace() == 14 )
@@ -68,46 +101,31 @@ categoriesForHead.clear();
                         //namespace==14 means it's a categorypage recurcive the categorypage
                         //recursion causes segmentation error go for only fist child
                        // getPagesForCategory( page.getPageName() );
-                        getPagesForCategoryFirstChild( page.getPageName() );
+                        getPagesForCategoryFirstChild( page.getPageName(), head, w );
                     }
                 }
-            } catch ( IOException ex )
-            {
-               FileWriter errorfile;
-                try
-                {
-                    errorfile = new FileWriter( "/home/kasun/rdfresult/error.txt", true );
-                     errorfile.append( ex.getMessage()+"\n" );
-                    errorfile.close();
-                } catch ( IOException ex1 )
-                {
-                    Logger.getLogger( RdfGenarator.class.getName() ).log( Level.SEVERE, null, ex1 );
-                }
-                   
-            }
 
         }
         
         clFromPageID.clear();
+        w.close();
     }
     
-    public static void getPagesForCategoryFirstChild( String catName )
-    {
+    public static void getPagesForCategoryFirstChild( String catName, String head , Writer w) throws IOException {
+
         ArrayList<Integer> clFromPageID = CategoryLinksDB.getPagesLinkedByCatName( catName );
-        FileWriter outfile;
 
         for ( int i = 0; i < clFromPageID.size(); i++ )
         {
 
-            try
-            {
+
                 Page page = PageDB.getPagebyID( clFromPageID.get( i ) );
                 if ( page.getPageNamespace() == 0 )
                 {
                     //namespace==0 means it's a article page
-                    outfile = new FileWriter( "/home/kasun/rdfresult/rdfoutput.txt", true );
-                    outfile.append( "<" + page.getPageName() + "> rdf:type <" + promintNodeName + "> \n" );
-                    outfile.close();
+                    w.write("<http://dbpedia.org/resource/" + page.getPageName() + "> a <http://dbpedia.org/ontology/" + head + "> .\n");
+
+
                 } 
                 /*
                 else
@@ -121,23 +139,14 @@ categoriesForHead.clear();
                 }
                 * 
                 */
-            } catch ( IOException ex )
-            {
-               FileWriter errorfile;
-                try
-                {
-                    errorfile = new FileWriter( "/home/kasun/rdfresult/error.txt", true );
-                     errorfile.append( ex.getMessage()+"\n" );
-                    errorfile.close();
-                } catch ( IOException ex1 )
-                {
-                    Logger.getLogger( RdfGenarator.class.getName() ).log( Level.SEVERE, null, ex1 );
-                }
+
+
                    
-            }
+
 
         }
         
         clFromPageID.clear();
+
     }
 }
