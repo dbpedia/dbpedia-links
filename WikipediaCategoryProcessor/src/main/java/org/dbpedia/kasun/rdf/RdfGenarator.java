@@ -27,8 +27,6 @@ import org.yago.javatools.parsers.PlingStemmer;
 public class RdfGenarator
 {
 
-    private static String promintNodeName;
-
     public static void main(String[] args) {
         String headCandidates = args[0];
         BufferedReader br = null;
@@ -61,15 +59,30 @@ public class RdfGenarator
             System.err.println(ioe.getMessage());
             System.exit(1);
         }
+        Writer w = null;
+        try {
+            w = new BufferedWriter(new OutputStreamWriter(new FileOutputStream("dataset.ttl"), "utf-8"));
+        } catch (UnsupportedEncodingException uee) {
+            System.err.println(uee.getMessage());
+            System.exit(1);
+        } catch (FileNotFoundException fnfe) {
+            System.err.println(fnfe.getMessage());
+            System.exit(1);
+        }
         for (String head: heads) {
             try {
                 String normalizedHead = capitalize(singularize(head));
-                Writer w = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(normalizedHead + ".ttl"), "utf-8"));
+
                 RdfGenarator.getCategoriesForHead(normalizedHead, w);
-                w.close();
             } catch (IOException ioe) {
                 System.err.println(ioe.getMessage());
             }
+        }
+        try {
+            w.close();
+        } catch (IOException ioe) {
+            System.err.println(ioe.getMessage());
+            System.exit(1);
         }
     }
 
@@ -86,8 +99,7 @@ public class RdfGenarator
         ArrayList<String> categoriesForHead = NodeDB.getCategoriesByHead( head );
 
 for(int j=0; j<categoriesForHead.size();j++){
-    promintNodeName=categoriesForHead.get( j );
-    getPagesForCategory( promintNodeName, head, w);
+    getPagesForCategory( categoriesForHead.get( j ), head, w);
 }
 categoriesForHead.clear();
 
