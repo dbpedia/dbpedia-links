@@ -74,13 +74,17 @@ public class RdfGenarator
         return PlingStemmer.stem(term);
     }
 
+    public static String capitalize(String word) {
+        return Character.toUpperCase(word.charAt(0)) + word.substring(1);
+    }
+
     public static void getCategoriesForHead( String head ) throws IOException {
 
         ArrayList<String> categoriesForHead = NodeDB.getCategoriesByHead( head );
 
 for(int j=0; j<categoriesForHead.size();j++){
     promintNodeName=categoriesForHead.get( j );
-    getPagesForCategory( promintNodeName, singularize(head));
+    getPagesForCategory( promintNodeName, capitalize(singularize(head)));
 }
 categoriesForHead.clear();
 
