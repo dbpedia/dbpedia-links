@@ -4,7 +4,7 @@
 import sys
 import mysql.connector
 
-CNX = mysql.connector.connect(user='kasun', database='kasun', password='kasun_perrera_kk')
+CNX = mysql.connector.connect(user='', database='', password='')
 CURSOR = CNX.cursor()
 
 
