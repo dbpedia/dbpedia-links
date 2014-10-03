@@ -42,6 +42,7 @@ Please take care and try to maintain the links that you submitted. Please fix er
 - Christopher Gutteridge (cgutteridge)
 - Heiko Paulheim, Uni Mannheim (HeikoPaulheim)
 - Petar Ristoski, Uni Mannheim (petarR)
+- Amy Guy, BBC / Uni Edinburgh (rhiaro)
  
 ## Get Access
 
