@@ -20,6 +20,18 @@ We expect that anybody using data from this repository will give proper attribut
 However, we will send friendly emails instead of lawyers, if we think attribution is not given properly. 
 
 
+# How to contribute links
+Please do a pull request to allow approval
+
+1. Choose an appropriate folder:
+links/dbpedia.org - for links from the main DBpedia namespace http://dbpedia.org/resource
+links/xxx.dbpedia.org - for links from a subdomain of DBpedia, e.g. http://nl.dbpedia.org
+links/wikidata - for links from TODO
+links/other - for other links
+2. We are linking by subdomain, so please have a look whether your domain/subdomain already exists
+Examples are:
+lobid.org - https://github.com/dbpedia/dbpedia-links/tree/master/links/xxx.dbpedia.org/de/lobid.org
+
 # Open Issues 
 Actually, it seems that more things are yet unclear than fixed. Please don't be slowed by formalities, just submit your links please, we will clean it up, after a while, if necessary.
 
