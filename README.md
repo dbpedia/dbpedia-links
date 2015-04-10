@@ -1,11 +1,24 @@
 dbpedia-links
 =============
-A repo that contains outgoing links in N-Triples format for DBpedia
+A repo that contains links and type for DBpedia
 
 #About
-Current version 0.6
+Current version 0.7
+This README specifies how to contribute links to the DBpedia+ Data Stack.
+Please read carefully. In case of questions, please use the GitHub Issue Tracker at https://github.com/dbpedia/dbpedia-links/issues
 
-**This readme defines the workflow to add your links to this repo and to DBpedia. It is still being discussed at the DBpedia discussion mailing list and subject to change at any moment. Also the repo structure might still change a lot.**
+
+# Disclaimer
+In order to allow widest possible dissemination, all data and code in this repository is to be treated as **public domain** or CC-0.
+We assume that you are aware of this when contributing to the repository, your links and scripts will be re-used, hosted and mixed with other data. 
+
+We expect that anybody using data from this repository will give proper attribution to the work of:
+* DBpedia as a community
+* This repository and its contributors as a whole
+* The individual contributions
+
+However, we will send friendly emails instead of lawyers, if we think attribution is not given properly. 
+
 
 # Open Issues 
 Actually, it seems that more things are yet unclear than fixed. Please don't be slowed by formalities, just submit your links please, we will clean it up, after a while, if necessary.
@@ -21,12 +34,7 @@ Actually, it seems that more things are yet unclear than fixed. Please don't be 
 
 goes (as always) to the DBpedia Discussion mailinglist: https://lists.sourceforge.net/lists/listinfo/dbpedia-discussion
 
-# License
-It seems, that we require that any uploaded links are at CC-BY-SA (or less restrictive e.g. CC-BY) like the rest of DBpedia. 
-That is the requirement to be hosted uniformly with DBpedia. 
-We assume that you know this and that you acknowledge this by pushing your links. 
-If you want to publish your links under a different license, please add a LICENCE.txt file in your linkset folder.
-Note that your links will be hosted in a separate RDF graph then and not be accessible via Linked Data, but just via SPARQL. 
+
 
 
 # Link Contributors
