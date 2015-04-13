@@ -28,16 +28,12 @@ Please do a GitHub pull request to allow us to check your contribution.
     * links/xxx.dbpedia.org - for links from a subdomain of DBpedia, e.g. http://nl.dbpedia.org
     * links/other - for other links
 
-2. We are linking by domain and subdomain, so please have a look whether your domain/subdomain already exists
-
-Examples are:
+2. We are linking by domain and subdomain, so please have a look whether your domain/subdomain already exists. Examples are:
     * viaf.org - links/dbpedia.org/viaf.org
     * lobid.org - links/dbpedia.org/lobid.org
     * lobid.org - links/xxx.dbpedia.org/de/lobid.org
 
-3. Submit links
-
-**Note** in this repo you can submit one or several of: 
+3. Submit the links. **Note** in this repo you can submit one or several of: 
     - a link file (N-Triples, one triple per line, DBpedia URL as subject, if larger than 200k triples ~20MB, bzip2 compressed)
     - a script generating above-mentioned link file
     - configuration files for SILK or LIMES
