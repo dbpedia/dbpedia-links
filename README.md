@@ -88,12 +88,19 @@ Shell script doing a SPARQL Construct query to retrieve links
 https://github.com/dbpedia/dbpedia-links/blob/master/links/dbpedia.org/lobid.org/organisation/scripts/makeLinks.sh
 
 ### patches/
-
-
-
+The patches folders allows users to contribute black and whitelists. 
+Please name the files like this:
+* patches/blacklist_$yourusername
+* patches/whitelist_$yourusername
+(This allows different users to maintain their own patches)
 
 # Submission of alternate classifications
+Submit the N-Triples file compressed as bzip2 to the types folder.
+1. create a folder with the domain the types are from
+2. the file should be in N-Triples format and should only contain triples having rdf:type as property 
 
+## Example classification:
+https://github.com/dbpedia/dbpedia-links/tree/master/types/umbel.org
 
 
 
