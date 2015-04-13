@@ -24,9 +24,9 @@ However, we will send friendly emails instead of lawyers, if we think attributio
 Please do a GitHub pull request to allow us to check your contribution.
 
 1. Choose an appropriate folder:
-* links/dbpedia.org - for links from the main DBpedia namespace http://dbpedia.org/resource
-* links/xxx.dbpedia.org - for links from a subdomain of DBpedia, e.g. http://nl.dbpedia.org
-* links/other - for other links
+** links/dbpedia.org - for links from the main DBpedia namespace http://dbpedia.org/resource
+** links/xxx.dbpedia.org - for links from a subdomain of DBpedia, e.g. http://nl.dbpedia.org
+** links/other - for other links
 
 2. We are linking by domain and subdomain, so please have a look whether your domain/subdomain already exists
 Examples are:
