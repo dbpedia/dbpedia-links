@@ -43,11 +43,11 @@ Examples are:
 
 within the folder mentioned in 2, please adhere to the following structure:
 
-    * README.md - documentation for the links 
-    * links.nt or links.nt.bz2 - the link file
-    * link-specs/ - SILK and LIMES config files
-    * scripts/ - any script that produces a link file
-    * patches/ - black or whitelist 
+* README.md - documentation for the links 
+* links.nt or links.nt.bz2 - the link file
+* link-specs/ - SILK and LIMES config files
+* scripts/ - any script that produces a link file
+* patches/ - black or whitelist 
 
 Please see the next section for details.
 
@@ -71,8 +71,24 @@ If the file is larger than 200k triples or 20MB please compress it using bzip2
 #### Example
 https://github.com/dbpedia/dbpedia-links/tree/master/links/dbpedia.org/eunis.eea.europa.eu
 
+
 ### link-specs/
+You can submit XML configurations for SILK or LIMES, see the example
+#### Example
+https://github.com/dbpedia/dbpedia-links/tree/master/links/dbpedia.org/www.geonames.org
+
 ### scripts/
+A simple script that generates the link file. We are using command-line linux to run it. 
+#### Example 1
+Java program started with a shell script
+https://github.com/dbpedia/dbpedia-links/blob/master/links/dbpedia.org/gadm.geovocab.org/scripts/makeLinks.sh
+#### Example 2
+Shell script downloading the links
+https://github.com/dbpedia/dbpedia-links/blob/master/links/dbpedia.org/lobid.org/manifestation/scripts/makeLinks.sh
+#### Example 3
+Shell script doing a SPARQL Construct query to retrieve links
+https://github.com/dbpedia/dbpedia-links/blob/master/links/dbpedia.org/lobid.org/organisation/scripts/makeLinks.sh
+
 ### patches/
 
 
