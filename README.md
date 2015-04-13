@@ -24,30 +24,30 @@ However, we will send friendly emails instead of lawyers, if we think attributio
 Please do a GitHub pull request to allow us to check your contribution.
 
 1. Choose an appropriate folder:
-** links/dbpedia.org - for links from the main DBpedia namespace http://dbpedia.org/resource
-** links/xxx.dbpedia.org - for links from a subdomain of DBpedia, e.g. http://nl.dbpedia.org
-** links/other - for other links
+    * links/dbpedia.org - for links from the main DBpedia namespace http://dbpedia.org/resource
+    * links/xxx.dbpedia.org - for links from a subdomain of DBpedia, e.g. http://nl.dbpedia.org
+    * links/other - for other links
 
 2. We are linking by domain and subdomain, so please have a look whether your domain/subdomain already exists
 Examples are:
-* viaf.org - links/dbpedia.org/viaf.org
-* lobid.org - links/dbpedia.org/lobid.org
-* lobid.org - links/xxx.dbpedia.org/de/lobid.org
+    * viaf.org - links/dbpedia.org/viaf.org
+    * lobid.org - links/dbpedia.org/lobid.org
+    * lobid.org - links/xxx.dbpedia.org/de/lobid.org
 
 3. Submit links
 **Note** in this repo you can submit one or several of: 
-- a link file (N-Triples, one triple per line, DBpedia URL as subject, if larger than 200k triples ~20MB, bzip2 compressed)
-- a script generating above-mentioned link file
-- configuration files for SILK or LIMES
-- patches, i.e. white and blacklists for links 
+    - a link file (N-Triples, one triple per line, DBpedia URL as subject, if larger than 200k triples ~20MB, bzip2 compressed)
+    - a script generating above-mentioned link file
+    - configuration files for SILK or LIMES
+    - patches, i.e. white and blacklists for links 
 
 within the folder mentioned in 2, please adhere to the following structure:
 
- * README.md - documentation for the links 
- * links.nt or links.nt.bz2 - the link file
- * link-specs/ - SILK and LIMES config files
- * scripts/ - any script that produces a link file
- * patches/ - black or whitelist 
+    * README.md - documentation for the links 
+    * links.nt or links.nt.bz2 - the link file
+    * link-specs/ - SILK and LIMES config files
+    * scripts/ - any script that produces a link file
+    * patches/ - black or whitelist 
 
 Please see the next section for details.
 
@@ -62,10 +62,10 @@ The file must:
 * be in N-Triples format http://www.w3.org/TR/n-triples/
 * have the DBpedia URI as subject
 * use either
-** owl:sameAs
-** skos:{exact|close|...}Match
-** domain-specific properties such as http://rdvocab.info/RDARelationshipsWEMI/manifestationOfWork
-** you can submit types (using rdf:type) separately in the "types" folder
+    * owl:sameAs
+    * skos:{exact|close|...}Match
+    * domain-specific properties such as http://rdvocab.info/RDARelationshipsWEMI/manifestationOfWork
+    * you can submit types (using rdf:type) separately in the "types" folder
 
 If the file is larger than 200k triples or 20MB please compress it using bzip2
 #### Example
